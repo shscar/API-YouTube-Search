@@ -80,9 +80,19 @@ function getVideoDetails(videoId) {
 function displayVideoDetails(video) {
     const { title, description, channelTitle, channelId } = video.snippet;
     const { viewCount, likeCount } = video.statistics;
+    const videoId = video.id;
 
     const videoHTML = `
         <div class="video-detail">
+            <div class="video-container">
+                <iframe
+                    width="100%"
+                    height="315"
+                    src="https://www.youtube.com/embed/${videoId}"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
         <h2>${title}</h2>
         <p>${description}</p>
         <p>Channel: <a href="https://www.youtube.com/channel/${channelId}" target="_blank">${channelTitle}</a></p>
