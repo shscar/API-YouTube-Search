@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YT API UPGRADE</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>YouTube Search</header>
+
+    <div class="container">
+        <input type="text" id="searchInput" placeholder="Cari video..." />
+        <select id="filterDuration">
+            <option value="any">Durasi (Semua)</option>
+            <option value="short">Pendek (&lt; 4 menit)</option>
+            <option value="medium">Sedang (4-10 menit)</option>
+            <option value="long">Panjang (&gt; 10 menit)</option>
+        </select>
+        <select id="filterOrder">
+            <option value="relevance">Relevansi</option>
+            <option value="date">Tanggal</option>
+            <option value="viewCount">Jumlah Penonton</option>
+            <option value="rating">Peringkat</option>
+        </select>
+        <button id="searchButton">Cari</button>
+    </div>
+
+    <div id="resultsContainer"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
